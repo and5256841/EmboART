@@ -48,3 +48,7 @@ async def upload_video(file: UploadFile = File(...)):
     cap.release()
     out.release()
     return FileResponse("output.mp4", media_type="video/mp4", filename="processed_video.mp4")
+    @app.get("/")
+def read_root():
+    return {"message": "EmboART Keralty API is running"}
+
